@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
+using EB_Utility;
+
 namespace GroceryExpenseTracker
 {
     public partial class Application : Form
@@ -71,6 +73,9 @@ namespace GroceryExpenseTracker
             InitializeComponent();
             CreateDefaultPurchaseDataFile();
             LoadPurchaseData();
+
+            Settings.defaultSettings.Add(new KeyValuePair<string, string>(SettingsUtil.GetCurrencySettingStr(), "₺"));
+            Settings.Load();
         }
 
         private void btnShowEntry_Click(object sender, EventArgs e)

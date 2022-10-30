@@ -42,7 +42,7 @@ namespace GroceryExpenseTracker
             }
 
             lblDate.Text       = purchaseList.Date.ToShortDateString();
-            lblGrandTotal.Text = "Grand Total: " + grandTotal.ToString()+"TL";
+            lblGrandTotal.Text = "Grand Total: " + grandTotal.ToString() + SettingsUtil.GetCurrencySymbol();
         }
 
         private void ChartDateProductListWindow_FormClosed(object sender, FormClosedEventArgs e)

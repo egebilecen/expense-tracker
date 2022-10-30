@@ -104,14 +104,16 @@ namespace GroceryExpenseTracker
                 totalExpense += grandTotal;
 
                 chartExpenses.Series[expenseChartSeriesLabel].Points.AddXY(i + 1, grandTotal);
-                chartExpenses.Series[expenseChartSeriesLabel].Points[i].Label     = grandTotal.ToString() + "TL";
+                chartExpenses.Series[expenseChartSeriesLabel].Points[i].Label     = grandTotal.ToString() + SettingsUtil.GetCurrencySymbol();
                 chartExpenses.Series[expenseChartSeriesLabel].Points[i].AxisLabel = date;
 
                 i++;
             }
 
-            lblGrandTotal.Text = "Total Expense: " + totalExpense.ToString() + "TL";
-            lblGrandTotal.Text += " | Total Day(s): " + DateTime.Parse(datePurchaseList.Last().Key).Subtract(DateTime.Parse(datePurchaseList.First().Key)).Days.ToString();
+            lblGrandTotal.Text = "Total Expense: " + totalExpense.ToString() + SettingsUtil.GetCurrencySymbol();
+            
+            if(datePurchaseList.Count > 0)
+                lblGrandTotal.Text += " | Total Day(s): " + DateTime.Parse(datePurchaseList.Last().Key).Subtract(DateTime.Parse(datePurchaseList.First().Key)).Days.ToString();
 
             // revert back to DESC order
             mainApp.purchaseHistory.History.Reverse();

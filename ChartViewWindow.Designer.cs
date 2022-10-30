@@ -29,8 +29,8 @@ namespace GroceryExpenseTracker
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.label1 = new System.Windows.Forms.Label();
             this.cbTimeInterval = new System.Windows.Forms.ComboBox();
             this.chartExpenses = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -42,10 +42,9 @@ namespace GroceryExpenseTracker
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Time Interval:";
             // 
@@ -54,10 +53,9 @@ namespace GroceryExpenseTracker
             this.cbTimeInterval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTimeInterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTimeInterval.FormattingEnabled = true;
-            this.cbTimeInterval.Location = new System.Drawing.Point(101, 5);
-            this.cbTimeInterval.Margin = new System.Windows.Forms.Padding(2);
+            this.cbTimeInterval.Location = new System.Drawing.Point(152, 8);
             this.cbTimeInterval.Name = "cbTimeInterval";
-            this.cbTimeInterval.Size = new System.Drawing.Size(113, 24);
+            this.cbTimeInterval.Size = new System.Drawing.Size(168, 33);
             this.cbTimeInterval.TabIndex = 2;
             this.cbTimeInterval.SelectedIndexChanged += new System.EventHandler(this.cbTimeInterval_SelectedIndexChanged);
             // 
@@ -66,14 +64,13 @@ namespace GroceryExpenseTracker
             this.chartExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartExpenses.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartExpenses.Legends.Add(legend3);
-            this.chartExpenses.Location = new System.Drawing.Point(12, 32);
-            this.chartExpenses.Margin = new System.Windows.Forms.Padding(2);
+            chartArea1.Name = "ChartArea1";
+            this.chartExpenses.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartExpenses.Legends.Add(legend1);
+            this.chartExpenses.Location = new System.Drawing.Point(18, 49);
             this.chartExpenses.Name = "chartExpenses";
-            this.chartExpenses.Size = new System.Drawing.Size(761, 514);
+            this.chartExpenses.Size = new System.Drawing.Size(1142, 791);
             this.chartExpenses.TabIndex = 3;
             this.chartExpenses.Text = "Expense Chart";
             this.chartExpenses.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chartExpenses_MouseClick);
@@ -83,24 +80,22 @@ namespace GroceryExpenseTracker
             this.lblGrandTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrandTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrandTotal.Location = new System.Drawing.Point(361, 5);
-            this.lblGrandTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGrandTotal.Location = new System.Drawing.Point(542, 8);
             this.lblGrandTotal.Name = "lblGrandTotal";
-            this.lblGrandTotal.Size = new System.Drawing.Size(412, 19);
+            this.lblGrandTotal.Size = new System.Drawing.Size(618, 29);
             this.lblGrandTotal.TabIndex = 6;
-            this.lblGrandTotal.Text = "Total Expense: 0₺ | Total Day(s): 0";
+            this.lblGrandTotal.Text = "Total Expense: 0 | Total Day(s): 0";
             this.lblGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ChartViewWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 560);
+            this.ClientSize = new System.Drawing.Size(1173, 862);
             this.Controls.Add(this.lblGrandTotal);
             this.Controls.Add(this.chartExpenses);
             this.Controls.Add(this.cbTimeInterval);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "ChartViewWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

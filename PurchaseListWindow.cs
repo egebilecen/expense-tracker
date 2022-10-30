@@ -52,7 +52,7 @@ namespace GroceryExpenseTracker
 
             lblMarketName.Text = purchaseList.MarketName;
             lblDate.Text       = purchaseList.Date.ToString();
-            lblGrandTotal.Text = "Grand Total: " + grandTotal.ToString()+"TL";
+            lblGrandTotal.Text = "Grand Total: " + grandTotal.ToString() + SettingsUtil.GetCurrencySymbol();
         }
 
         public PurchaseListWindow(Application mainApp, Model.PurchaseList purchaseList = null)
