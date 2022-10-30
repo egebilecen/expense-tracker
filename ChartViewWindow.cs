@@ -38,13 +38,19 @@ namespace GroceryExpenseTracker
                     }
                     break;
                     
-                    case 1: // Past 3 Months
+                    case 1: // Past 2 Months
+                    {
+                        if(purchaseList.Date < today.AddMonths(-2)) continue;
+                    }
+                    break;
+                    
+                    case 2: // Past 3 Months
                     {
                         if(purchaseList.Date < today.AddMonths(-3)) continue;
                     }
                     break;
 
-                    case 2: // This Year
+                    case 3: // This Year
                     {
                         if(purchaseList.Date.Year != today.Year) continue;
                     }
@@ -105,6 +111,7 @@ namespace GroceryExpenseTracker
             }
 
             lblGrandTotal.Text = "Total Expense: " + totalExpense.ToString() + "TL";
+            lblGrandTotal.Text += " | Total Day(s): " + DateTime.Parse(datePurchaseList.Last().Key).Subtract(DateTime.Parse(datePurchaseList.First().Key)).Days.ToString();
 
             // revert back to DESC order
             mainApp.purchaseHistory.History.Reverse();
@@ -116,11 +123,13 @@ namespace GroceryExpenseTracker
             this.mainApp.Hide();
 
             InitializeComponent();
+            MinimumSize = Size;
 
             // Time Interval ComboBox
             cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "This Month",    Value = "0" });
-            cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "Past 3 Months", Value = "1" });
-            cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "This Year",     Value = "2" });
+            cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "Past 2 Months", Value = "0" });
+            cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "Past 3 Months", Value = "0" });
+            cbTimeInterval.Items.Add(new ComboBoxItem(){ Text = "This Year",     Value = "0" });
 
             cbTimeInterval.SelectedIndex = 0;
         }

@@ -17,7 +17,7 @@ namespace GroceryExpenseTracker
         public ChartDateProductListWindow(Form parent, Model.PurchaseList purchaseList)
         {
             this.parent = parent;
-            this.parent.Hide();
+            //this.parent.Hide();
 
             InitializeComponent();
 

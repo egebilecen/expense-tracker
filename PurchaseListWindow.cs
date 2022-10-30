@@ -61,6 +61,7 @@ namespace GroceryExpenseTracker
             this.mainApp.Hide();
 
             InitializeComponent();
+            MinimumSize = Size;
 
             if(purchaseList == null) ActivateNewListMode();
             else
