@@ -110,7 +110,7 @@ namespace GroceryExpenseTracker
                 i++;
             }
 
-            lblGrandTotal.Text = "Total Expense: " + totalExpense.ToString() + "TL";
+            lblGrandTotal.Text = "Total Expense: " + totalExpense.ToString() + SettingsUtil.GetCurrencySymbol();
             
             if(datePurchaseList.Count > 0)
                 lblGrandTotal.Text += " | Total Day(s): " + DateTime.Parse(datePurchaseList.Last().Key).Subtract(DateTime.Parse(datePurchaseList.First().Key)).Days.ToString();

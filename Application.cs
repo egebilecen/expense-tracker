@@ -74,7 +74,7 @@ namespace GroceryExpenseTracker
             CreateDefaultPurchaseDataFile();
             LoadPurchaseData();
 
-            Settings.defaultSettings.Add(new KeyValuePair<string, string>("CurrencySymbol", "₺"));
+            Settings.defaultSettings.Add(new KeyValuePair<string, string>(SettingsUtil.GetCurrencySettingStr(), "₺"));
             Settings.Load();
         }
 
