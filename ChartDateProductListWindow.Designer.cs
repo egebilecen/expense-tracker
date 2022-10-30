@@ -69,7 +69,7 @@ namespace GroceryExpenseTracker
             this.lblGrandTotal.Name = "lblGrandTotal";
             this.lblGrandTotal.Size = new System.Drawing.Size(345, 29);
             this.lblGrandTotal.TabIndex = 6;
-            this.lblGrandTotal.Text = "Grand Total: 0TL";
+            this.lblGrandTotal.Text = "Grand Total: 0";
             this.lblGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDate
