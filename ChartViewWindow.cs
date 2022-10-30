@@ -104,7 +104,7 @@ namespace GroceryExpenseTracker
                 totalExpense += grandTotal;
 
                 chartExpenses.Series[expenseChartSeriesLabel].Points.AddXY(i + 1, grandTotal);
-                chartExpenses.Series[expenseChartSeriesLabel].Points[i].Label     = grandTotal.ToString() + "TL";
+                chartExpenses.Series[expenseChartSeriesLabel].Points[i].Label     = grandTotal.ToString() + SettingsUtil.GetCurrencySymbol();
                 chartExpenses.Series[expenseChartSeriesLabel].Points[i].AxisLabel = date;
 
                 i++;
