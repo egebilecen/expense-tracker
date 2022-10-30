@@ -78,6 +78,7 @@
     <Compile Include="PurchaseListWindow.Designer.cs">
       <DependentUpon>PurchaseListWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
